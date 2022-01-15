@@ -14,15 +14,15 @@ app.use(routes);
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost:27017/" + process.env.DB_NAME,
     {
-        useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
+        useNewUrlParser: true,
+        
     }
 );
 
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
+
 app.listen(PORT, () => {
     console.log(`Running at: http://localhost:${PORT}`);
 });

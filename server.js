@@ -12,7 +12,7 @@ app.use(express.static("public"));
 // Sets up the routes
 app.use(routes);
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/" + process.env.DB_NAME,
+    process.env.MONGODB_URI || "mongodb://localhost/Mongo_workout",
     {
         useUnifiedTopology: true,
         useNewUrlParser: true,

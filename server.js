@@ -12,7 +12,7 @@ app.use(express.static("public"));
 // Sets up the routes
 app.use(routes);
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost:27017/" + process.env.DB_NAME,
+    process.env.MONGODB_URI || "mongodb://localhost/" + process.env.DB_NAME,
     {
         useUnifiedTopology: true,
         useNewUrlParser: true,
